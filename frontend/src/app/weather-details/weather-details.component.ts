@@ -19,7 +19,12 @@ export class WeatherDetailsComponent implements OnInit {
   constructor(
       private route: ActivatedRoute,
       private weatherService: WeatherService
-  ) { }
+  ) {
+    this.route.params.subscribe(value => {
+        this.woeid = parseInt(this.route.snapshot.paramMap.get('woeid'));
+        this.weatherService.search(this.woeid).subscribe(value => this.setWeatherValues(value));
+    });
+  }
 
   ngOnInit() {
     this.woeid = parseInt(this.route.snapshot.paramMap.get('woeid'));
