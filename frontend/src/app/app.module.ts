@@ -9,7 +9,15 @@ import { SearchCityComponent } from './search-city/search-city.component';
 import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 import { WeatherComponent } from './weather/weather.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatButtonModule, MatGridListModule, MatInputModule, MatListModule} from "@angular/material";
+import {
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModule,
+    MatInputModule,
+    MatListModule,
+    MatProgressSpinnerModule
+} from "@angular/material";
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +25,15 @@ import {MatButtonModule, MatGridListModule, MatInputModule, MatListModule} from 
     HomeComponent,
     SearchCityComponent,
     WeatherDetailsComponent,
-    WeatherComponent
+    WeatherComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatInputModule, MatButtonModule, MatListModule, MatGridListModule
+    MatInputModule, MatButtonModule, MatListModule, MatGridListModule, MatCardModule, MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

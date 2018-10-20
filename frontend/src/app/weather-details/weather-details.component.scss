@@ -1,0 +1,14 @@
+.weather-details-card {
+  width: 90%;
+  //max-width: 300px;
+  display: inline-block;
+  margin: 2px;
+}
+.weather-details-card img {
+  max-width: 80%;
+  max-height: 200px;
+  margin: 4px;
+}
+.show-spinner {
+  display: block;
+}

@@ -1,3 +1,9 @@
-<div *ngFor="let city of selectedCities">
+<mat-grid-list [cols]="4" rowHeight="500px">
+    <mat-grid-tile [colspan]="1" *ngFor="let cityId of id">
+        <weather [id]="cityId"></weather>
+    </mat-grid-tile>
+</mat-grid-list>
 
-</div>
+<!--<div *ngFor="let cityId of id">-->
+
+<!--</div>-->

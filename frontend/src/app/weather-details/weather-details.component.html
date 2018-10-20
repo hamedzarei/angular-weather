@@ -1,3 +1,26 @@
-<p>
-  weather-details works!
-</p>
+<mat-grid-list *ngIf="weather" [cols]="4" rowHeight="500px">
+  <mat-grid-tile *ngFor="let cweather of consolidated_weather" [colspan]="1">
+    <mat-card  class="weather-details-card">
+      <mat-card-header>
+        <div mat-card-avatar class="weather-details-header-image"></div>
+        <mat-card-title>{{ weather.title }}</mat-card-title>
+        <mat-card-subtitle> {{ getDay(cweather.applicable_date) }} </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image
+           src="https://www.metaweather.com/static/img/weather/png/{{ cweather.weather_state_abbr}}.png"
+           alt="{{ cweather.weather_state_name }}">
+      <mat-card-content>
+        <p>
+          temperature: {{ cweather.the_temp.toFixed(4) }}
+        </p>
+        <p>
+          max temperature: {{ cweather.max_temp.toFixed(4) }}
+        </p>
+        <p>
+          min temperature: {{ cweather.min_temp.toFixed(4) }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>

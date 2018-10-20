@@ -16,6 +16,6 @@ export class SearchCityComponent implements OnInit {
   }
 
   search(name: string): void {
-    this.cityService.search(name).subscribe(value => this.cities = value);
+    this.cityService.search(name).subscribe(value => this.cities = value.slice(6));
   }
 }
