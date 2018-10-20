@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { SearchCityComponent } from './search-city/search-city.component';
 import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 import { WeatherComponent } from './weather/weather.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonModule, MatGridListModule, MatInputModule, MatListModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -19,8 +21,10 @@ import { WeatherComponent } from './weather/weather.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule, MatButtonModule, MatListModule, MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

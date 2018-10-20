@@ -1,13 +1,17 @@
 <div id="search-component">
-  <h4>City Search</h4>
+  <form class="city-search-form">
+    <mat-form-field class="city-search-full-width">
+      <input #searchBox matInput placeholder="Enter City" id="search-box" (keyup)="search(searchBox.value)" />
+    </mat-form-field>
+  </form>
 
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
 
-  <ul class="search-result">
-    <li *ngFor="let city of cities" >
+
+  <mat-list class="search-result">
+    <mat-list-item *ngFor="let city of cities">
       <a routerLink="/weather/{{city.woeid}}">
         {{city.title}}
       </a>
-    </li>
-  </ul>
+    </mat-list-item>
+  </mat-list>
 </div>

@@ -1,9 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 html {
   min-height: 100%;
   body {
     height: 100%;
     background-image: url('assets/background.png');
     background-repeat: repeat;
+    & > * {
+      height: 100%;
+    }
   }
 }
