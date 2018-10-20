@@ -12,6 +12,8 @@ import {ConsolidatedWeather} from "../consolidated-weather";
 })
 export class WeatherDetailsComponent implements OnInit {
 
+  protected loading: boolean = true;
+
   protected woeid: number;
   protected weather: Weather;
   protected consolidated_weather: ConsolidatedWeather[];
@@ -34,6 +36,7 @@ export class WeatherDetailsComponent implements OnInit {
   setWeatherValues(value: Weather): void {
     this.weather = value;
     this.consolidated_weather = value.consolidated_weather;
+    this.loading = false;
   }
 
   getDay(date: string): string {

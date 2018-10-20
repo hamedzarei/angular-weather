@@ -11,6 +11,8 @@ import {Weather} from "../weather";
 })
 export class WeatherComponent implements OnInit {
 
+  protected loading: boolean = true;
+
   @Input() name: string;
   @Input() id: number = -1;
 
@@ -26,8 +28,14 @@ export class WeatherComponent implements OnInit {
 
   ngOnInit() {
     if (this.id != -1) {
-      this.weatherService.search(this.id).subscribe(value => this.weather = value);
+      this.weatherService.search(this.id).subscribe(value => this.setValue(value));
     }
   }
+
+
+    setValue(value: Weather): void {
+        this.weather = value;
+        this.loading = false;
+    }
 
 }

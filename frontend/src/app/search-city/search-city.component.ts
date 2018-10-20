@@ -9,6 +9,7 @@ import {CityService} from "../city.service";
 })
 export class SearchCityComponent implements OnInit {
 
+  protected loading: boolean = true;
   protected cities: City[];
   constructor(private cityService: CityService) { }
 
@@ -16,6 +17,11 @@ export class SearchCityComponent implements OnInit {
   }
 
   search(name: string): void {
-    this.cityService.search(name).subscribe(value => this.cities = value.slice(6));
+    this.cityService.search(name).subscribe(value => this.setValue(value));
+  }
+
+  setValue(value: City[]): void {
+      this.cities = value.slice(6);
+      this.loading = false;
   }
 }

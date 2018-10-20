@@ -1,3 +1,5 @@
+<p *ngIf="loading"> finding id of cities... </p>
+
 <mat-grid-list [cols]="4" rowHeight="500px">
     <mat-grid-tile [colspan]="1" *ngFor="let cityId of id">
         <weather [id]="cityId"></weather>

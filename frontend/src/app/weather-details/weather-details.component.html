@@ -1,3 +1,4 @@
+<p *ngIf="loading">loading</p>
 <mat-grid-list *ngIf="weather" [cols]="4" rowHeight="500px">
   <mat-grid-tile *ngFor="let cweather of consolidated_weather" [colspan]="1">
     <mat-card  class="weather-details-card">
