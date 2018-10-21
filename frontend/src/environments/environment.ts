@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true
+};
+
+export const urls = {
+  backend: 'http://localhost:7676/weather.php'
 };
 
 /*
