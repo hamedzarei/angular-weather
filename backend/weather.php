@@ -26,6 +26,7 @@ $baseUrl = 'https://www.metaweather.com/api/location/';
  */
 function quitWithResponse($output, $code = 200) {
 	header('Content-Type: text/json');
+	header('Access-Control-Allow-Origin: *');
 	http_response_code($code);
 	echo $output;
 	exit;
