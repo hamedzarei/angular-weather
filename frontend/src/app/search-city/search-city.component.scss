@@ -1,7 +1,32 @@
-.mat-list .mat-list-item {
-  height: auto;
-}
-.search-result {
-  //position: absolute;
-  z-index: 10;
+#search-component {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .loading {
+    transition: max-height 0.25s ease-in;;
+  }
+  .city-search-form {
+    //flex-grow: 1;
+  }
+  .search-result {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(1,1,1,0.1);
+    padding: 0;
+    mat-list-item {
+      display: inline-block;
+      width: auto;
+    }
+    //flex-grow: 3;
+    //.mat-list .mat-list-item {
+    //  height: auto;
+    //}
+    //position: absolute;
+    //border-left: blueviolet dotted;
+    z-index: 10;
+  }
 }

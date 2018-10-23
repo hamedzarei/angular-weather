@@ -1,0 +1,9 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  .weather-card {
+    flex-grow: 3;
+    padding: 2px;
+    width: 300px;
+  }
+}

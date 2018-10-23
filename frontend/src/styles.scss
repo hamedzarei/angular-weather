@@ -19,6 +19,19 @@ html {
     background-repeat: repeat;
     & > * {
       height: 100%;
+      width: 100%;
+      text-align: center;
+      margin: auto;
     }
+  }
+}
+
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  * {
+    flex-grow: 1;
   }
 }

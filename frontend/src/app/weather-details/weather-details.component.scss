@@ -1,11 +1,18 @@
-.weather-details-card {
-  width: 90%;
-  //max-width: 300px;
-  display: inline-block;
-  margin: 2px;
-}
-.weather-details-card img {
-  max-width: 80%;
-  max-height: 200px;
-  margin: 4px;
+.weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .weather-details-card {
+    //margin-
+    width: 300px;
+    max-width: 300px;
+    //max-width: 300px;
+    //display: inline-block;
+    margin: 15px;
+  }
+  .weather-details-card img {
+    max-width: 80%;
+    max-height: 200px;
+    margin: 4px;
+  }
 }

@@ -41,8 +41,8 @@ function quitWithJsonResponse($output, $code = 200) {
 function mirrorToEndpoint($uri) {
 	global $baseUrl;
 	$response = @file_get_contents($baseUrl . $uri);
-	
-	if ( $response ) {
+
+	if ( $response !=  '' && $response != '[]' ) {
 		return quitWithResponse($response);	
 	}	
 	

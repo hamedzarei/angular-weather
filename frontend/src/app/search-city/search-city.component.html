@@ -6,8 +6,9 @@
   </form>
 
 
-
-  <mat-list class="search-result">
+  <p class="loading" *ngIf="loading">loading search result</p>
+  <p class="no-data" *ngIf="noData">no data...</p>
+  <mat-list *ngIf="cities" class="search-result">
     <mat-list-item *ngFor="let city of cities">
       <a routerLink="/weather/{{city.woeid}}">
         {{city.title}}

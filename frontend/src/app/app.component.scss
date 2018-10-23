@@ -1,0 +1,11 @@
+.container-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  .search-tool {
+    flex-grow: 1;
+  }
+  .page-content {
+    flex-grow: 9;
+  }
+}

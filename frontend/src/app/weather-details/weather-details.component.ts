@@ -23,6 +23,8 @@ export class WeatherDetailsComponent implements OnInit {
       private weatherService: WeatherService
   ) {
     this.route.params.subscribe(value => {
+        this.loading = true;
+        this.consolidated_weather = [];
         this.woeid = parseInt(this.route.snapshot.paramMap.get('woeid'));
         this.weatherService.search(this.woeid).subscribe(value => this.setWeatherValues(value));
     });
